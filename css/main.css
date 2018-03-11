@@ -9,475 +9,455 @@
    fonts
    ========================================================================== */
    
-   /* font-family: 'Roboto', sans-serif;
-   font-family: 'Montserrat', sans-serif;
-   font-family: 'Playfair Display', serif; */
+  
+
+   /* font-family: 'Source Sans Pro', sans-serif; */
 
 /* ==========================================================================
    Global styles
    ========================================================================== */
 
    html, body{
-       height: 100%;
-       margin: 0;
-       padding: 0;
-       background: rgb(255,253,237);
-   }
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
 
-   h1, .h1, h2, .h2, h3, .h3 {
-       margin: 0;
-   }
-    
+*{
+    box-sizing: border-box;
+}
 
-    .container-fluid .row{
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
+h1, .h1, h2, .h2, h3, .h3 {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
 
-   
-   .ffspl-section{
-       padding-top: 80px;
-       padding-bottom: 80px;
-   }
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Source Sans Pro', sans-serif;
+}
 
-   .ffspl-section h3 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 3rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        margin-bottom: 5px;
-   }
+h4{
+    font-size: 20px;
+}
 
-   .ffspl-section p {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 400;
-        line-height: 140%;
-        margin-bottom: 5px;
-   }
+figure {
+    margin: 0px;
+}
 
-    .ffspl-section h4,  .ffspl-section li {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 300;  
-    }
+h3{
+    text-transform: uppercase;
+    font-weight: 600;    
+}
 
-    .ffspl-section h4{
-        font-family: 'Montserrat', sans-serif;
-        letter-spacing: 1px;        
-        font-weight: 500;
-        text-transform: uppercase;
-        font-size: 1.8rem;
-        margin: 15px auto;
-        text-align: center;
-    }
+li{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+    list-style: none;
+    margin:  0 350px;
+    position: relative;
 
-    .ffspl-section li{
-        font-weight: 500;
-        font-size: 1.8rem;
-    }
+    /* padding-bottom: 20px; */
+}
 
-    .section-heading {
-        position: relative;
-        padding-bottom: 65px;
-    }
+li span{
+    position: absolute;
+    right: 102%;
+    text-align: right;
+}
 
-    .section-heading::after {
-        position: absolute;
-        left: 50%;        
-        content: '';
-        width: 90px;
-        transform: translateX(-50%);
-        display: block;
-        border-bottom: 10px solid rgba(58, 199, 216, 1);
-    }
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+    padding:  0 10px;
+    padding-bottom: 20px;
+}
 
-    .section-heading.white-heading::after{
-        border-bottom: 10px solid rgba(255,255,255,.9);
-    }
+#concept p, #user p, #scenario p {
+    padding:  0 25%;
+}
+
+section{
+    padding-bottom: 100px;
+}
+
+hr{
+    margin-bottom: 50px;
+}
+
+.display-4{
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
 
 
-    .container{
-        max-width: 1100px;
-    }
-   
-/* -----------------------------------------
-   Header
------------------------------------------ */
-
-    .headerContent h1,li {
-        padding:0;
-        margin:0;
-        }
-    
-    .headerWrapper {
-        padding: 10px;
-        position:fixed;
-        width: 100%;    
-        z-index: 2000;
-        transition: 0.3s all ease; 
-    }   
-
-    .headerBg {
-        background: rgba(255, 255, 255, 1);        
-        position: absolute;
-        top:10px;
-        left:10px;
-        right: 10px;
-        bottom: 10px;
-        opacity: 0.7;
-        border: none;
-        transition: 0.3s all ease;  
-    }
-
-    .headerBg.moveUp {
-        transform: translateY(-10px) scaleX(1.1);
-        opacity: 1;
-        background: rgb(255,253,237);
-        border-bottom: 1px solid rgba(29,163,176,0.4);
-    }
-
-    .headerContent {
-        box-sizing: border-box;
-        position: relative;
-        width: 100%;     
-        height: 70px;
-        transition: 0.3s all ease;
-    }
-
-    .headerContent.moveUp{
-        transform: translateY(-10px);
-    }
-
-    h1.logo{
-        padding: 10px;        
-    }	
-	
-    h1.logo a {
-        text-indent:-999%;
-        overflow:hidden;
-        display:block;
-        height:50px;
-        width: 220px;	
-        margin:10px;
-        background:url(../img/ffspl_logo.png) no-repeat;
-        background-size: contain;
-    }
-    
-    .tagline {
-        position: absolute;
-        top: 90px;
-        left: 10px;
-        right: 10px; 
-        display: inline-block;
-        height: 70px;
-        padding: 0 30px;
-        background: rgba(255, 255, 255, 0.7);
-        transition: 0.3s opacity ease;
-    }
-
-    .tagline.gone {
-        opacity: 0;
-    }
-
-    .tagline p {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.8rem;
-        font-weight: 200;
-        text-align: center;
-        margin-bottom: 5px;
-        margin: 0 auto;
-        color: rgba(29,163,176,1);
-    }
-
-
-
-
-
-	
-	
-/* -----------------------------------------
-   Navigation
------------------------------------------ */	
-/*blue color :#1EAEDB */
-
-	
-/*add to nav*/
-    .navDark{
-        display:block;
-        position:fixed;
-        width:100%;
-        height:100vh;
-        background: rgba(29,163,176,1);
-        opacity:0.9;
-        top:0;
-        left:0;
-        right: 0;
-        bottom: 0;
-        z-index: 2100;
-        overflow: hidden;
-    }
-
-    .navigation{
-        display:none;
-    }	
-
-/*add to navigation*/
-    .navToggle {
-        display:block;
-        position:relative;
-        padding: 0px;
-        top: 45%;
-        left: 50%;
-        -webkit-transform:translate(-50%,-45%)
-        }
-
-    .navigation.navToggle li{	
-        list-style:none;
-        display:block;
-        padding:20px 20px;
-        text-align:center;
-        }
-
-    .navigation.navToggle li a {
-        text-decoration:none;
-        font-size:24px;
-        font-weight:bold;
-        color:white;
-        opacity:1;
-        }
-
-    .navicon{
-        display:block;
-        opacity:1;
-        padding:10px;
-        margin-right: 10px;
-        width: 50px;
-        height:50px;
-        z-index: 2200;
-        background:url(../img/burger.png) 10px 10px no-repeat;
-        }
-
-    .cross{
-        background:url(../img/crosswhite.png) 10px 10px no-repeat;
-        }			
-        
-
-
-
-   /* ==========================================================================
-   Navbar Styles
-   ========================================================================== */
-
-  
-
-
-
-   /* ==========================================================================
-   Hero Section
-   ========================================================================== */
-
-   .hero-section{
-        position: relative;
-        min-height: 100%;
-    }
-
-    .hero-section .container-fluid{
-        position: absolute;
-        height: 100%;
-    }
-
-    .jumbotron-fluid.hero-section{
-        background: linear-gradient(135deg, rgba(4, 255, 201, 0.6) 10%, rgba(0, 140, 255, 0.5) 80% ),url(../img/hero_bg1.jpg) center top no-repeat;
-        background-size: cover;
-    }
  
-    .hero-text {
-        position: relative;
-    }
-
-    .hero-text h3{
-        font-family: 'Montserrat', sans-serif;
-        font-size: 4rem;
-        line-height: 1.2; 
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-align: center;
-        color: white;
-        padding-right: 10px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0; 
-    }
-
-   /* ==========================================================================
-   Service Area
-   ========================================================================== */
-   
-
-   .service-area h4{
-        color: grey;
-    }
-
-   .service-area col{
-       width: 180px;
-       height: 180px;
-    }
-
-    .service-img-box{
-        opacity: 0;
-        transform: translateY(50px);
-        transition: 1s all ease;
-    }
-
-    .service-img-box.is-showing{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-
-    .service-img-box .img-thumbnail{
-        background: none;
-    }
 
 
-
-
-   /* ==========================================================================
-   About Us Section
-   ========================================================================== */
-
-    
-    .jumbotron-fluid.aboutus-section {
-        background: linear-gradient( 90deg, rgba(4, 255, 201, 0.9) 0%, rgba(0, 140, 255, 0.8) 100%  ),url(../img/about_us_bg2.jpg) center top no-repeat;
-        background-size: cover;
-        padding-bottom: 600px;    
-    }
-
-    .aboutus-section hr {
-        border-color: white;
-    }
-
-    .aboutus-section p {
-        padding-bottom: 60px;
-    }
-
-
-   /* ==========================================================================
-   Services Umbrella Section
-   ========================================================================== */
-
-   .service-umbrella {
-        margin-top: -600px;
-        max-width: 450px;   
-   }
-
-   .service-umbrella hr {
-       margin-top: 110px;
-   }
-
-   .service-umbrella p{
-       padding-bottom: 100px;
-   }
-
-   .service-umbrella .card-body{
-       color: white;
-   }
-
-   .service-umbrella .card-body{
-       padding-bottom: 30px;       
-   }  
-
-   .service-umbrella .list-group-item{
-        padding: 10px 15px;
-        margin-bottom: -1px;
-        background-color: rgba(0,0,0,0); 
-        border: 1px solid rgba(0,0,0,0);
-   }
-
-   .service-cat{
-        display: block;
-        position: relative; 
-        overflow: hidden;
-        background: rgb(157, 67, 241);
-        z-index: 900;
-        border-radius: 6px;
-        -webkit-box-shadow: 0px 9px 13px -1px rgba(0,0,0,0.25);
-        -moz-box-shadow: 0px 9px 13px -1px rgba(0,0,0,0.25);
-        box-shadow: 0px 9px 13px -1px rgba(0,0,0,0.25);
-    }    
-
-    .service-cat h4{
-        font-size: 2.1rem;
-        font-weight: 600;
-    }
-
-    .service-cat h4, .service-cat li {
-        z-index: 910;
-    }
-
-    .service-cat::after{
-        position: absolute;
-        top: 0;
-        left: 0;        
-        content: '';
-        width: 150%;
-        height: 150%;        
-        display: block;
-        background: rgba(255,255,255,0.2);
-        transform: translate(-35%,-55%) rotate(70deg);        
-   }
-
-   /* .cat1 {
-        background: rgba(255, 21, 130,0.9); 
-    }
-
-   .cat2{
-        background: rgba(131,15,227,0.9);
-   }
-
-   .cat3{
-        background: rgba(255, 21, 130, 0.9); 
-    } */
-
-    .cat1 {
-        background: rgba(48, 167, 225,1); 
-    }
-
-   .cat2{
-        /* background: rgba(118,118,240,1); */
-        background: rgba(157,67,241,1);
-   }
-
-   .cat3{
-        background: rgba(65, 202, 198, 1); 
-    }
-
-    /* .cat1 {
-        background: rgba(255, 119, 116,1); 
-    }
-
-   .cat2{
-        background: rgba(143,102,255,1);
-   }
-
-   .cat3{
-        background: rgba(255, 119, 116, 1); 
-    } */
-
-   
-
-    /* ==========================================================================
-Disclaimer Section
+/* ==========================================================================
+Landing page - Hero Section
 ========================================================================== */
-   
+
+.hero-section{
+    width: 100%;
+    height: 100%;
+    background: pink;
+}
 
 
-.disclaimer-section p{
-    padding-bottom: 30px;
-    font-weight: 500;
-    font-size: 1.8rem;
+/* ==========================================================================
+Landing page - nav Section
+========================================================================== */
+
+.nav-wrapper25{
+    height: 100vh;
+}
+
+.navbox25{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.nav25 li{
+    display: block;
+}
+
+
+
+
+
+
+/* ==========================================================================
+Grid
+========================================================================== */
+
+.inner-box{
+    display: block;
+    height: 25vw;
+    border: 0.5px solid rgba(163, 163, 163, 0.5);
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+figcaption{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 30px;}
+
+.inner-box a {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+.inner-box h4{
+    color: white;
+}
+
+.img{
+    display: block;   
+}
+
+.cap1 {    
+    display: block;
+    height: 25vw;
+    background: rgb(14, 14, 14);
+    /* background: url("../img/egraph.jpg") center center no-repeat, linear-gradient( rgba(239,83,80,0.75), rgba(239,83,80,0.75) ); */
+    /* background-size: cover; */
+}
+
+
+/* ==========================================================================
+Electric Section
+========================================================================== */
+
+/* .electric-section .cap1 {    
+    display: block;
+    height: 25vw;
+    background: rgba(7,7,7,1);
+    background: url("../img/egraph.jpg") center center no-repeat, linear-gradient( rgba(239,83,80,0.75), rgba(239,83,80,0.75) );
+    background-size: cover;
+} */
+
+.electric-section .img1 {          
+    background: url("../img/ev-sale.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: contain;
+}
+
+.electric-section .img2 {          
+    background: url("../img/bolt.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.electric-section .img3 {       
+    background: url("../img/model3.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.electric-section .img4 {       
+    background: url("../img/leaf.png") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+
+
+
+
+
+/* ==========================================================================
+Driverless Section
+========================================================================== */
+
+
+.autonomous-section .img1 {          
+    background: url("../img/level5.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: contain;
+}
+
+.autonomous-section .img2 {       
+    background: url("../img/nvidia.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.autonomous-section .img3 {       
+    background: url("../img/read.png") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.autonomous-section .img4 {       
+    background: url("../img/symbioz.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+
+
+
+/* ==========================================================================
+ai Section
+========================================================================== */
+
+
+.ai-section .img1 {          
+    background: url("../img/netflix.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.ai-section .img2 {       
+    background: url("../img/alexa.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.ai-section .img3 {       
+    background: url("../img/aihead.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.ai-section .img4 {       
+    background: url("../img/obstacle.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+.ai-section .img5 {       
+    background: url("../img/sophia.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+
+
+
+/* ==========================================================================
+connect Section
+========================================================================== */
+
+
+.connect-section .img1 {          
+    background: url("../img/internet.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.connect-section .img2 {       
+    background: url("../img/cloud.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.connect-section .img3 {       
+    background: url("../img/v2v.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.connect-section .img4 {       
+    background: url("../img/location.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+.connect-section .img5 {       
+    background: url("../img/iot.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+
+
+
+
+/* ==========================================================================
+screen Section
+========================================================================== */
+
+
+.screen-section .img1 {          
+    background: url("../img/byton.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.screen-section .img2 {       
+    background: url("../img/hud.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.screen-section .img3 {       
+    background: url("../img/ffdisplay.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.screen-section .img4 {       
+    background: url("../img/model3i.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+
+/* ==========================================================================
+interaction Section
+========================================================================== */
+
+
+.interaction-section .img1 {          
+    background: url("../img/gesture.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.interaction-section .img2 {       
+    background: url("../img/touch.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: contain;
+}
+
+.interaction-section .img3 {       
+    background: url("../img/gaze.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.interaction-section .img4 {       
+    background: url("../img/hard.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.interaction-section .img5 {       
+    background: url("../img/voice.jpeg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.interaction-section .img6 {       
+    background: url("../img/joystick.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: contain;
+}
+
+
+
+
+/* ==========================================================================
+ecosystem Section
+========================================================================== */
+
+
+.ecosystem-section .img1 {          
+    background: url("../img/ezgo.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.ecosystem-section .img2 {       
+    background: url("../img/charge.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.ecosystem-section .img3 {       
+    background: url("../img/3d.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+
+
+
+/* ==========================================================================
+uitrend Section
+========================================================================== */
+
+
+.uitrend-section .img1 {          
+    background: url("../img/uimg1.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.uitrend-section .img2 {       
+    background: url("../img/uimg2.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: contain;
+}
+
+.uitrend-section .img3 {       
+    background: url("../img/uimg3.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+
+.uitrend-section .img4 {          
+    background: url("../img/uimg4.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.uitrend-section .img5 {       
+    background: url("../img/uimg5.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.uitrend-section .img6 {       
+    background: url("../img/uimg6.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+
+
+
+
+
+/* ==========================================================================
+industry Section
+========================================================================== */
+
+
+.industry-section .img1 {          
+    background: url("../img/benz.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.industry-section .img2 {       
+    background: url("../img/bmw.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.industry-section .img3 {       
+    background: url("../img/volvo.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+
+.industry-section .img4 {          
+    background: url("../img/faraday.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
 }
 
 
@@ -486,208 +466,18 @@ Disclaimer Section
 
 
 
-     /* ==========================================================================
-   We Assure Quality Section
-   ========================================================================== */
 
-   .quality-section {
-        padding-top: 0;
-        padding-bottom: 0;
-        overflow: hidden;
-   }
 
-   .quality-section hr{
-        margin-top: 60px;
-        margin-bottom: 0px;
-   }
 
-   .quality-section ul{
-       list-style-type: none;
-   }
-   
-   .quality-section li{
-        position: relative;
-        padding-bottom: 20px;
-   }
 
-   .quality-section li span{
-        position: absolute;
-        left: -40px;
-        top: 4px;
-        color: rgba(29,163,176,1);
-    }
 
 
-   /* ==========================================================================
-   Client Section
-   ========================================================================== */
 
-    .client-section {
-        max-width: 1000px;
-    }
 
-    .client-section .col-6 {
-        padding: 0px 10px 20px;
-    }
 
-    .client-box {
-        opacity: 1;
-        transform: translateY(50px);
-        transition: 1s all ease;
-    }
 
-    .client-box.is-showing{
-        opacity: 1;
-        transform: translateY(0px);
-    }
 
 
-    .client-img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 30px;
-        border: 1px solid rgba(153, 153, 153, 0.3);
-        background: white;
-    }
-
-    .client-img .img-thumbnail {
-        border: none;
-    }
-
-  
-
-
-
-
-/*-------------------------------------------------------------------------
-Bootsnip - For home page only
----------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-   /* ==========================================================================
-    Footer Section
-   ========================================================================== */
-
-    footer {
-        background: rgba(29,163,176,1);     
-        background: darkslategrey;     
-    }
-
-    footer hr{
-        border-color: white;
-    }
-   
-    .social-contact{
-        padding: 50px 0px 150px;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2.2rem;
-        font-weight: 300;
-        color: white;
-    }
-
-    .social-contact p, .legal p{
-        text-align: center;        
-    }
-
-    .social-icons, .legal-links{
-        -ms-flex-pack: center!important;
-        justify-content: center!important;
-    }
-   
-    .legal {
-        color: white;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 300;
-    }
-
-
-    footer li a {
-        color: white;        
-    }
-
-    footer li a:hover, footer li a:visited, footer li a:active {
-        color: lightgrey;
-        text-decoration: none;       
-    }
-
-
-
-
-
-
-
-
-
-   /* ==========================================================================
-   Screen above 576px - sm
-   ========================================================================== */
-   @media screen and (min-width: 576px) {
-   /* ==========================================================================
-   Header section
-   ========================================================================== */
-
-   .headerContent {   
-        height: 90px;   
-    }
-
-    h1.logo a {
-        height:70px;
-        width: 310px;	
-    }
-
-    .tagline {
-        top: 110px;
-        left: initial;
-        right: initial;   
-        height: 90px;    
-    }
-
-    
-
-    .tagline p {    
-        font-size: 2.2rem;
-        margin-bottom: 5px;    
-    }
-
-
-
-
-   /* ==========================================================================
-   Hero Section
-   ========================================================================== */
-
-   .hero-text h3 {
-        font-size: 5.5rem;
-    }
-
-
-
-   /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-   }
 
 
 
@@ -696,224 +486,231 @@ Bootsnip - For home page only
 
 
 /* ==========================================================================
-   Screen above 768px - md
-   ========================================================================== */
-   @media screen and (min-width: 768px) {
-    /* ==========================================================================
-    Navigation
-    ========================================================================== */
- 
-.navicon{
-	display:none;
-	opacity:0;
-	}
+CONCEPT PAGE SECTION
+========================================================================== */
 
-.navigation{	
-	display:block;	
-	right:0;
-	top:0;
-    padding:10px 20px;
-    margin: 0;
-	}	
 
-.navigation li{	
-	list-style:none;
-	display:inline-block;
-	padding:0px 20px;
-	}	
-	
-.navigation li a {
-    text-decoration:none;
-    font-weight: 500;
-    font-size: 1.8rem;
-    color: grey;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-	}	
+.concept-section .img1 {          
+    background: url("../img/concept/main.jpg") center center no-repeat, linear-gradient( rgb(255, 255, 255), rgb(255, 255, 255)) ;
+    background-size: contain;
+}
 
-.whitenav li a {
-	color:rgba(255,255,255,1);
-	}
+.concept-section .img2 {          
+    background: url("../img/concept/card.jpg") center center no-repeat, linear-gradient( rgb(255, 255, 255), rgb(255, 255, 255)) ;
+    background-size: contain;
+}
 
-.whitenav li a:hover{
-	color:rgba(152,240,244,1.00);
-	}
-	
- #nav .current a {
-	 font-size:20px;
-	 font-weight:bold;
-     }
-  
+.concept-section .img3 {          
+    background: url("../img/concept/climate.jpg") center center no-repeat, linear-gradient( rgb(255, 255, 255), rgb(255, 255, 255)) ;
+    background-size: contain;
+}
 
-      /* ==========================================================================
-   Hero Section Section
-   ========================================================================== */
+.concept-section .img4 {          
+    background: url("../img/concept/drive.jpg") center center no-repeat, linear-gradient( rgb(255, 255, 255), rgb(255, 255, 255)) ;
+    background-size: contain;
+}
+
+.concept-section .img5 {          
+    background: url("../img/concept/media.jpg") center center no-repeat, linear-gradient( rgb(255, 255, 255), rgb(255, 255, 255)) ;
+    background-size: contain;
+}
+
+.concept-section .img6 {          
+    background: url("../img/concept/meeting.jpg") center center no-repeat, linear-gradient( rgb(255, 255, 255), rgb(255, 255, 255)) ;
+    background-size: contain;
+}
+
+.concept-section .img7 {          
+    background: url("../img/concept/track.jpg") center center no-repeat, linear-gradient( rgb(255, 255, 255), rgb(255, 255, 255)) ;
+    background-size: contain;
+}
 
 
 
-     .jumbotron-fluid.hero-section{
-        background: linear-gradient(135deg, rgba(4, 255, 201, 0.6) 10%, rgba(0, 140, 255, 0.5) 80% ),url(../img/hero_bg1.jpg) center top no-repeat;
-        background-size: cover;
-    }
+.uih-img{
+    display: block;
+    height: 40vw;
+    border: 1px solid rgba(163, 163, 163, 0.5);
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
 
-    /* ==========================================================================
-   About Us Section
-   ========================================================================== */
+.uiv-img{
+    display: block;
+    height: 70vw;
+    border: 1px solid rgba(163, 163, 163, 0.5);
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
 
+.concept-section .img8 {          
+    background: url("../img/concept/full.png") center center no-repeat, linear-gradient( rgb(26, 26, 26), rgb(26, 26, 26)) ;
+    background-size: contain;
+}
 
-   
+.concept-section .img9 {          
+    background: url("../img/concept/control-panel.png") center center no-repeat, linear-gradient( rgb(26, 26, 26), rgb(26, 26, 26)) ;
+    background-size: contain;
+}
 
-   /* ==========================================================================
-   Services Umbrella Section
-   ========================================================================== */
+.concept-section .img10 {          
+    background: url("../img/concept/cluster.png") center center no-repeat, linear-gradient( rgb(26, 26, 26), rgb(26, 26, 26)) ;
+    background-size: contain;
+}
 
-   .service-umbrella{
-        max-width: 1140px;   
-    }
+.concept-section .img11 {          
+    background: url("../img/concept/music_player.png") center center no-repeat, linear-gradient( rgb(26, 26, 26), rgb(26, 26, 26)) ;
+    background-size: contain;
+}
 
-    .service-cat.cat2{
-        transform: scale(1,1) translateY(0px);
-        opacity: 0;
-        z-index: 905;
-        transition: 0.6s all ease;
-    }
-
-    .service-cat.cat1{
-        transform: translate(-20px,30px);
-        transition: 0.6s all ease;
-        opacity: 0;
-    }    
-
-    .service-cat.cat3{
-        transform: translate(20px,30px);
-        transition: 0.6s all ease;
-        opacity: 0;
-    }
-
-    .cat1.assemble {
-        transform: translate(20px,0px);
-        opacity: 1;
-    }
-
-    .cat2.assemble {
-        transform: scale(1.1,1.1) translateY(0px);
-        opacity: 1;    
-    }
-
-    .cat3.assemble {
-        transform: translate(-20px,0px);
-        opacity: 1;
-    }
-
-
-
-      /* ==========================================================================
-    Quality Section
-    ========================================================================== */
-
-
-    .quality-section {
-        /* background: url("../img/star_bg.jpg") right top no-repeat;  */
-        /* background: lightseagreen;         */
-   }
-
-
-
-     /* ==========================================================================
-    Footer
-    ========================================================================== */
-
-    .social-contact p{
-        text-align: left;        
-    }
-
-    .social-icons{
-        -ms-flex-pack: end!important;
-        justify-content: flex-end!important;
-    }
-
-    .legal p {
-        text-align: right;
-    }
-
-    .legal-links{
-        -ms-flex-pack: start!important;
-        justify-content: flex-start!important;
-    }
+.concept-section .img12 {          
+    background: url("../img/concept/call_screen.png") center center no-repeat, linear-gradient( rgb(26, 26, 26), rgb(26, 26, 26)) ;
+    background-size: contain;
+}
 
 
 
 
-    /* ==========================================================================
-    Author's custom styles
-    ========================================================================== */
 
 
 
 
- 
- 
- 
- 
-    }
-
-
-
-    /* ==========================================================================
-   Screen above 992px - lg
-   ========================================================================== */
-   @media screen and (min-width: 992px) {
-    /* ==========================================================================
-    Author's custom styles
-    ========================================================================== */
- 
-      /* ==========================================================================
-   Services Umbrella Section
-   ========================================================================== */
-
-   .service-umbrella{
-        max-width: 1100px;   
-    }
- 
- 
- 
- 
-    /* ==========================================================================
-    Author's custom styles
-    ========================================================================== */
- 
- 
- 
- 
-    /* ==========================================================================
-    Author's custom styles
-    ========================================================================== */
+.main-img{
+    display: block;
+    height: 40vw;
+    border: 1px solid rgba(163, 163, 163, 0.5);
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
 
 
 
 
- 
-    }
+
+/* ==========================================================================
+Screen above 576px - sm
+========================================================================== */
+@media screen and (min-width: 576px) {
+/* ==========================================================================
+Header section
+========================================================================== */
 
 
 
 
+
+/* ==========================================================================
+Hero Section
+========================================================================== */
+
+
+
+
+/* ==========================================================================
+Author's custom styles
+========================================================================== */
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+Screen above 768px - md
+========================================================================== */
+@media screen and (min-width: 768px) {
+ /* ==========================================================================
+ Navigation
+ ========================================================================== */
+
+
+
+ /* ==========================================================================
+About Us Section
+========================================================================== */
+
+
+
+
+  /* ==========================================================================
+ Footer
+ ========================================================================== */
+
+
+
+
+ /* ==========================================================================
+ Author's custom styles
+ ========================================================================== */
+
+
+
+
+
+
+
+
+ }
+
+
+
+ /* ==========================================================================
+Screen above 992px - lg
+========================================================================== */
+@media screen and (min-width: 992px) {
+ /* ==========================================================================
+ Author's custom styles
+ ========================================================================== */
 
    /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+Services Umbrella Section
+========================================================================== */
+
+
+
+ /* ==========================================================================
+ Author's custom styles
+ ========================================================================== */
+
+
+
+
+ /* ==========================================================================
+ Author's custom styles
+ ========================================================================== */
 
 
 
 
 
-   /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+ }
 
 
 
-   
+
+
+/* ==========================================================================
+Author's custom styles
+========================================================================== */
+
+
+
+
+
+/* ==========================================================================
+Author's custom styles
+========================================================================== */
+
+
+
+
 
 
 
