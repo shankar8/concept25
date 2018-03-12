@@ -157,6 +157,11 @@ Landing page - nav Section
     margin: 0px;
 }
 
+li a {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
 #home ul{
     padding: 0px;
 }
