@@ -62,8 +62,9 @@ li{
 
 li span{
     position: absolute;
-    right: 102%;
+    right: 104%;
     text-align: right;
+    white-space: nowrap;
 }
 
 p {
@@ -519,6 +520,77 @@ industry Section
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+User Section
+========================================================================== */
+
+
+.user-section .img1 {          
+    background: url("../img/user/user.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.user-section .img2 {       
+    background: url("../img/user/race.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.user-section .img3 {       
+    background: url("../img/user/shirts.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.user-section .img4 {          
+    background: url("../img/user/shoes.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.user-section .img5 {          
+    background: url("../img/user/gamer.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.user-section .img6 {          
+    background: url("../img/user/family.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.user-section .img7 {          
+    background: url("../img/user/tech.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+.user-section .img8 {          
+    background: url("../img/user/coffee1.jpg") center center no-repeat, linear-gradient( rgba(7, 7, 7, 1), rgba(0, 0, 0, 1)) ;
+    background-size: cover;
+}
+
+
+
+.userh-box{
+    display: block;
+    height: 50vw;
+    border: 1px solid rgba(163, 163, 163, 0.5);
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
 
 
 
